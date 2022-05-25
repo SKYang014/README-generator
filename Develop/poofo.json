@@ -1,0 +1,14 @@
+{
+	"name": "poofo",
+	"languages": [
+		"JavaScript",
+		"HTML",
+		"CSS",
+		"ES6"
+	],
+	"comms": [
+		"Email",
+		"Phone Call",
+		"Text"
+	]
+}
