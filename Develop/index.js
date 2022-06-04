@@ -1,6 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generatePage = require('./utils/page-template.js');
+const writeFile = require('./utils/generate-site')
 // TODO: Create an array of questions for user input
 // const questions = [];
 
@@ -14,11 +16,11 @@ const fs = require('fs');
 // init();
 
 //Creates the file/project name
-const promptUser = () => {
+const promptUser = readMeData => {
     return inquirer.prompt([
     {
         type: 'input',
-        name: '# ',
+        name: 'projectName',
         message: 'What is your Project name? (Required)',
         validate: projectNameInput => {
         if (projectNameInput) {
@@ -43,10 +45,34 @@ const promptUser = () => {
             }
         },
         {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email? (Required)',
+            validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('Please enter your email!');
+                return false;
+            }
+            }
+        },
+        {
+            type: 'input',
+            name: 'description',
+            message: 'Describe your project:',
+        },
+        {
         type: 'checkbox',
         name: 'languages',
-        message: 'What did you this project with? (Check all that apply)',
+        message: 'What did you use for this project? (Check all that apply)',
         choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
+        },
+        {
+            type: 'list',
+            name: 'license',
+            message: 'What license did you use? (Check all that apply)',
+            choices: ['Apache', 'Boost', 'BSD 3', 'Creative Commons']
         },
         {
         type: 'confirm',
@@ -93,20 +119,24 @@ const promptUser = () => {
                     {
                     type: 'input',
                     name: 'test',
-                    message: 'Provide some information about test instructions:',
+                    message: 'What are a few tests to perform with this application:',
                     when: ({ confirmTest }) => confirmTest
                     },
-        
-                
     ])
-    .then((answers) => {
-        const filename = ("README.ME");
-    
-    fs.writeFile(filename, JSON.stringify(answers, null, '\t'), err =>
-    err ? console.log(err) : console.log('success!')
-    );
-    
-    });
 }
 
+
+
+
+
 promptUser()
+    .then(readmeData => {
+        console.log(readmeData)
+        return generatePage(readmeData)
+    })
+    .then(pageHTML => {
+        return writeFile(pageHTML);
+    })
+    .catch(err => {
+        console.log(err);
+    }); 
