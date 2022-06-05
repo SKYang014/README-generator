@@ -101,13 +101,13 @@ const promptUser = readMeData => {
             {
                 type: 'confirm',
                 name: 'confirmContrib',
-                message: 'Would you like to enter some information about contribution guidelines?',
+                message: 'Would you like to enter some contributor names?',
                 default: true
                 },
                 {
                 type: 'input',
                 name: 'contrib',
-                message: 'Provide some information about contribution guidelines:',
+                message: 'Provide the contributors names:',
                 when: ({ confirmContrib }) => confirmContrib
                 },
                 {

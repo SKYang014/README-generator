@@ -1,8 +1,8 @@
 
-# asdfasd
+# README Generator
 
 ## Description:
-asdfasdf
+This project generates readable README documentation
 ## Table of Contents
 
 - [Installation](#installation)
@@ -12,19 +12,18 @@ asdfasdf
 
 ## Installation
 
-undefined
+Be sure to install npm inquirer to ensure the program runs as intended
 
 ## Usage
 
-undefined
+use the project to create README files for projects
 
-## Credits
+## Contributing
 
-Contributors: undefined
+Contributors: Sarah, Katie, Juan
 
 ## License
-[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
-        
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 
 
 ---
@@ -33,18 +32,17 @@ Contributors: undefined
 
 ## Features
 
-This project features the following languages: JavaScript,HTML,CSS,ES6
+This project features the following languages: JavaScript,ES6,Node
 
-## How to Contribute
+## Credits
 
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
+Contributors: Sarah, Katie, Juan
 
 ## Tests
 Here are a few tests to perform with this application:
-undefined
+Feel free to test the different license badges!
 
 ## Questions
 Further quetions?  Please feel free to reach out to me at: 
-https://github.com/asdfasdf
-asdfasd
+SKyang014@gmail.com or view my profile at https://github.com/Skyang014
 

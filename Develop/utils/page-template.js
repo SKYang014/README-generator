@@ -58,7 +58,7 @@ ${renderLicenseBadge(templateData.license)}
 
 This project features the following languages: ${templateData.languages}
 
-## How to Contribute
+## Credits
 
 Contributors: ${templateData.contrib}
 
